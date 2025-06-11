@@ -12,10 +12,11 @@ import {
   Sparkles // For extra flair
 } from 'lucide-react'; // Using Lucide for better icons
 
-const Navbar = () => {
+
+const Navbar = ({isDarkMode, setIsDarkMode}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [isDarkMode, setIsDarkMode] = useState(true);
+
 
   // Dark mode setup
   useEffect(() => {
@@ -43,38 +44,18 @@ const Navbar = () => {
 
   const iconSize = 20;
   const activeClass = "text-blue-500 dark:text-blue-400";
-  const inactiveClass = "text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200";
+  const inactiveClass = "text-gray-500 dark:text-gray-400 hover:text-gray-100 dark:hover:text-gray-700";
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800">
+    <div className='flex justify-center items-center ' >
+      <nav className={`fixed top-0 w-xl ${ isDarkMode ? "bg-slate-900/90" : "bg-white/90" } backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 rounded-full`}>
       <div className="max-w-md mx-auto px-4">
-        <div className="flex justify-between items-center py-3">
-          {/* Modern profile icon with shine effect */}
-          <motion.button
-            onClick={() => scrollToSection('home')}
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            whileTap={{ scale: 0.9 }}
-            className="p-2 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 shadow-lg group"
-            aria-label="Home"
-          >
-            <div className="relative">
-              <User2 
-                size={iconSize} 
-                className="text-white" 
-                strokeWidth={1.8}
-              />
-              <Sparkles 
-                size={12} 
-                className="absolute -top-1 -right-1 text-yellow-300 opacity-0 group-hover:opacity-100 transition-opacity"
-                strokeWidth={2.5}
-                fill="currentColor"
-              />
-            </div>
-          </motion.button>
+        <div className="flex justify-center items-center py-3">
+          
 
           {/* Desktop Navigation - Icon Only */}
           <motion.div 
-            className="hidden md:flex items-center space-x-6"
+            className="hidden md:flex items-center space-x-10"
             initial="hidden"
             animate="visible"
           >
@@ -179,6 +160,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
     </nav>
+    </div>
   );
 };
 
