@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Server } from 'lucide-react';
 import Navbar from '../components/Navbar';
 
-const Portfolio = () => {
+const Portfolio = ({isDarkMode}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -126,35 +126,30 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Navigation */}
-      <Navbar/>
+  <div className={`min-h-screen  ${isDarkMode ? "bg-black" : "bg-white" } `}>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-4xl font-bold">
-              JD
-            </div>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            John Developer
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 ">
+            🖐️Hey there! I'm
+            <br />
+            <span className='bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-5xl md:text-7xl' >John Developer</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed">
+          <p className={`text-xl md:text-2xl mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-700"} leading-relaxed`}>
             Full Stack MERN Developer crafting digital experiences with modern web technologies
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('projects')}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className={`px-8 py-3 ${isDarkMode ? "text-gray-100" : "text-gray-900"} bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105`}
             >
               View My Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-3 border-2 border-blue-400 rounded-full font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+              className={`px-8 py-3 border-2 ${isDarkMode ? "text-gray-100" : "text-gray-900"} border-blue-400 rounded-full font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300`}
             >
               Get In Touch
             </button>

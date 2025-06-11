@@ -1,12 +1,14 @@
+import { useState } from "react";
 import Portfolio from "./pages/Portfolio"
-
+import Navbar from "./components/Navbar";
 
 function App() {
-  
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
     <>
-      <Portfolio/>
+    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Portfolio isDarkMode={isDarkMode}  />
     </>
   )
 }
