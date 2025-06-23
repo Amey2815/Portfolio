@@ -47,8 +47,8 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
   const inactiveClass = "text-gray-500 dark:text-gray-400 hover:text-gray-100 dark:hover:text-gray-700";
 
   return (
-    <div className='flex justify-center items-center ' >
-      <nav className={`fixed top-0 w-xl ${ isDarkMode ? "bg-slate-900/90" : "bg-white/90" } backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 rounded-full`}>
+    <div className='flex justify-center items-center  ' >
+      <nav className={`fixed top-4 w-xl ${ isDarkMode ? "bg-slate-900/90" : "bg-white/90" } backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 rounded-full`}>
       <div className="max-w-md mx-auto px-4">
         <div className="flex justify-center items-center py-3">
           
