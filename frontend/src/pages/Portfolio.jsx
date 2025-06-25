@@ -192,15 +192,15 @@ const Portfolio = ({ isDarkMode }) => {
       {/* About Section */}
       <section id="about" className="py-10 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-12 items-center">
             <div>
-              <div className='my-15 mx-5'>
+              <div className='md:my-15 my-5 md:mx-5'>
                 <PinContainer
                   title='Amey Powar'
                   href="https://www.instagram.com/powaramey1"
                 >
-                  <div className='flex justify-center md:w-86 w-80'>
+                  <div className='flex justify-center md:w-86 w-60'>
                     <div className="relative group">
                       <img
                         className='md:w-[700px] w-[400px] h-full rounded-2xl transform group-hover:scale-105 transition-transform duration-300'
@@ -215,29 +215,29 @@ const Portfolio = ({ isDarkMode }) => {
                 </PinContainer>
               </div>
 
-              <p className={`${isDarkMode ? "text-gray-300" : "text-black" } mb-6 leading-relaxed text-lg`}>
+              <p className={`${isDarkMode ? "text-gray-300" : "text-black"} mb-6 leading-relaxed md:text-left text-center md:text-lg text-xs`}>
                 Passionate about creating innovative web solutions with clean code and exceptional user experiences.
                 I bring ideas to life through modern technologies and creative problem-solving.
               </p>
 
-              <div className="flex flex-wrap gap-6 mt-8">
+              <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-gray-800 hover:bg-gray-700 transition-colors"
                 >
                   <Github className="w-5 h-5" />
                   <span>GitHub</span>
                 </a>
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-blue-600 hover:bg-blue-500 transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
                   <span>LinkedIn</span>
                 </a>
                 <a
                   href="#"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-500 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-red-600 hover:bg-red-500 transition-colors"
                 >
                   <Mail className="w-5 h-5" />
                   <span>Email</span>
@@ -270,7 +270,7 @@ const Portfolio = ({ isDarkMode }) => {
                     ></div>
 
                     {/* Skill card */}
-                    <div className={`h-full flex flex-col items-center justify-center p-5 rounded-xl transition-all duration-500
+                    <div className={`h-full flex flex-col items-center justify-center p-3 rounded-xl transition-all duration-500
           ${isDarkMode ?
                         "bg-gray-800/80 group-hover:bg-gray-800" :
                         "bg-gray-200/80 group-hover:bg-white"
@@ -331,7 +331,7 @@ const Portfolio = ({ isDarkMode }) => {
 
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 px-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
