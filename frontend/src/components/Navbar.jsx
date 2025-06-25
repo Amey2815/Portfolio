@@ -48,7 +48,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
 
   return (
     <div className='flex justify-center items-center  ' >
-      <nav className={`fixed top-4 w-xl ${ isDarkMode ? "bg-slate-900/90" : "bg-white/90" } backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 rounded-full`}>
+      <nav className={`fixed top-4 md:w-xl w-85 ${ isDarkMode ? "bg-slate-900/90" : "bg-white/90" } backdrop-blur-md z-50 border-b border-gray-100 dark:border-slate-800 rounded-full`}>
       <div className="max-w-md mx-auto px-4">
         <div className="flex justify-center items-center py-3">
           
@@ -124,7 +124,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
       </div>
 
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -138,7 +138,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   whileTap={{ scale: 0.95 }}
-                  className={`flex flex-col items-center p-3 rounded-lg transition-all ${
+                  className={`flex flex-col items-center p-2 rounded-lg transition-all ${
                     activeSection === item.id
                       ? 'bg-blue-50 dark:bg-slate-700'
                       : 'hover:bg-gray-100 dark:hover:bg-slate-700'
@@ -158,7 +158,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      
     </nav>
     </div>
   );
