@@ -3,6 +3,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, S
 import Navbar from '../components/Navbar';
 import { assets } from '../assets/assets.js'
 import { PinContainer } from "../components/ui/3d-pin";
+import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 const Portfolio = ({ isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -129,8 +130,8 @@ const Portfolio = ({ isDarkMode }) => {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <BackgroundBeamsWithCollision  >
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <h1 className={` ${isDarkMode ? "text-white" : "text-black"} text-4xl md:text-5xl font-bold mb-6 `}>
             🖐️Hey there! I'm
             <br />
@@ -154,6 +155,8 @@ const Portfolio = ({ isDarkMode }) => {
             </button>
           </div>
         </div>
+        </BackgroundBeamsWithCollision>
+        
       </section>
 
       {/* About Section */}
