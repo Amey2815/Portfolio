@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Server } from 'lucide-react';
 import Navbar from '../components/Navbar';
-import { assets } from '../assets/assets'
+import { assets } from '../assets/assets.js'
 import { PinContainer } from "../components/ui/3d-pin";
 
 const Portfolio = ({ isDarkMode }) => {
@@ -38,87 +38,54 @@ const Portfolio = ({ isDarkMode }) => {
   };
 
   const projectCategories = {
-    "Full-Stack": [
-      {
-        title: "E-Commerce Platform",
-        description: "Complete online shopping solution with user authentication, payment gateway integration, inventory management, and admin dashboard with real-time analytics.",
-        tech: ["React", "Node.js", "MongoDB", "Express", "Stripe API", "JWT", "Redux"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-blue-400 to-purple-600"
-      },
-      {
-        title: "Social Media App",
-        description: "Full-featured social platform with real-time messaging, post sharing, likes/comments system, user profiles, and image upload functionality.",
-        tech: ["React", "Node.js", "MongoDB", "Express", "Socket.io", "Cloudinary", "JWT"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-pink-400 to-red-600"
-      },
-      {
-        title: "Learning Management System",
-        description: "Educational platform with course creation, video streaming, quiz system, progress tracking, and student-teacher interaction features.",
-        tech: ["React", "Node.js", "MongoDB", "Express", "AWS S3", "Stripe", "Chart.js"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-green-400 to-blue-600"
-      }
-    ],
     "Frontend": [
       {
-        title: "Portfolio Dashboard",
+        title: "Souled Store Clone",
         description: "Interactive cryptocurrency portfolio tracker with real-time price updates, charts, portfolio analytics, and market insights using external APIs.",
-        tech: ["React", "Chart.js", "Tailwind CSS", "REST APIs", "Local Storage"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-yellow-400 to-orange-600"
+        tech: ["React","Tailwind CSS"],
+        github: "https://github.com/Amey2815/Souled-Store",
+        live: "https://souled-store-nine.vercel.app/",
+        image: assets.Souled
       },
       {
-        title: "Weather App",
+        title: "Personal Portfolio",
         description: "Modern weather application with location-based forecasts, interactive maps, weather alerts, and beautiful UI animations.",
-        tech: ["React", "OpenWeather API", "Geolocation API", "CSS Animations", "PWA"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-cyan-400 to-blue-600"
-      },
-      {
-        title: "Task Manager UI",
-        description: "Intuitive task management interface with drag-and-drop functionality, filters, search, and beautiful animations using modern React patterns.",
-        tech: ["React", "React DnD", "Framer Motion", "Tailwind CSS", "Context API"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-purple-400 to-pink-600"
+        tech: ["React", "Tailwind CSS", "Framer Motion"],
+        github: "https://github.com/Amey2815/Amey-Porfolio",
+        live: "https://amey-porfolio.vercel.app/",
+        image: assets.Portfolio
       }
     ],
-    "Backend": [
+    "Full-Stack": [
       {
-        title: "REST API Server",
-        description: "Robust RESTful API with comprehensive authentication, CRUD operations, data validation, error handling, and extensive documentation.",
-        tech: ["Node.js", "Express", "MongoDB", "JWT", "Bcrypt", "Swagger", "Jest"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-gray-600 to-gray-800"
+        title: "Store Rating Platform",
+        description: "A full-stack MERN application for rating and managing stores. The platform supports three user roles: Admin, Store Owner, and Regular User.",
+        tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
+        github: "",
+        image: "bg-gradient-to-br from-blue-400 to-purple-600"
+      }
+    ],
+    "Freelance": [
+      {
+        title: "QuickTalk",
+        description: "QuickTalk is communication offering  Auto Text SMS After Call, Auto Whatsapp Message with media After Call , Whatsapp ChatBot  businesses website.",
+        tech: ["Framer Motion", "React.js" , 'Tailwind CSS', "Lucide-react" , "React Router DOM" ],
+        github: "https://github.com/Amey2815/Replica_project",
+        live: "https://replica-project.vercel.app/",
+        image: assets.QuickTalk
       },
       {
-        title: "Real-time Chat API",
-        description: "Scalable chat server with Socket.io, real-time messaging, rooms, user presence, message history, and file sharing capabilities.",
-        tech: ["Node.js", "Socket.io", "MongoDB", "Express", "Multer", "Redis"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-emerald-400 to-teal-600"
-      },
-      {
-        title: "Authentication Microservice",
-        description: "Secure authentication service with OAuth integration, password reset, email verification, role-based access control, and rate limiting.",
-        tech: ["Node.js", "Express", "MongoDB", "Passport.js", "Nodemailer", "Redis"],
-        github: "#",
-        live: "#",
-        image: "bg-gradient-to-br from-red-400 to-pink-600"
+        title: "RegorpDigiTech",
+        description: "RegorpDigiTech is a digital marketing , grafic design, web development, and mobile app development company website.",
+        tech: ["Framer Motion", "React.js" , 'Tailwind CSS', "Lucide-react"],
+        github: "https://github.com/Amey2815/RegoProject",
+        live: "https://rego-project.vercel.app/",
+        image: assets.Rego
       }
     ]
   };
 
-  const [activeCategory, setActiveCategory] = useState("Full-Stack");
+  const [activeCategory, setActiveCategory] = useState("Frontend");
 
   const skills = [
     {
@@ -167,7 +134,7 @@ const Portfolio = ({ isDarkMode }) => {
           <h1 className={` ${isDarkMode ? "text-white" : "text-black"} text-4xl md:text-5xl font-bold mb-6 `}>
             🖐️Hey there! I'm
             <br />
-            <span className='bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-5xl md:text-7xl' >John Developer</span>
+            <span className='bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-5xl md:text-7xl' >Amey Powar</span>
           </h1>
           <p className={`text-xl md:text-2xl mb-8 ${isDarkMode ? "text-gray-300" : "text-gray-700"} leading-relaxed`}>
             Full Stack MERN Developer crafting digital experiences with modern web technologies
@@ -198,7 +165,7 @@ const Portfolio = ({ isDarkMode }) => {
               <div className='md:my-15 my-5 md:mx-5'>
                 <PinContainer
                   title='Amey Powar'
-                  href="https://www.instagram.com/powaramey1"
+                  href="https://github.com/Amey2815"
                 >
                   <div className='flex justify-center md:w-86 w-60'>
                     <div className="relative group">
@@ -222,26 +189,22 @@ const Portfolio = ({ isDarkMode }) => {
 
               <div className="flex flex-wrap justify-center items-center gap-6 mt-8">
                 <a
-                  href="#"
+                  href="https://github.com/Amey2815"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-gray-800 hover:bg-gray-700 transition-colors"
+                  target='_blank'
                 >
                   <Github className="w-5 h-5" />
                   <span>GitHub</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/amey-powar-a85869332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-blue-600 hover:bg-blue-500 transition-colors"
+                  target='_blank'
                 >
                   <Linkedin className="w-5 h-5" />
                   <span>LinkedIn</span>
                 </a>
-                <a
-                  href="#"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray-300 bg-red-600 hover:bg-red-500 transition-colors"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Email</span>
-                </a>
+                
               </div>
             </div>
 
@@ -364,15 +327,13 @@ const Portfolio = ({ isDarkMode }) => {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectCategories[activeCategory].map((project, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group border border-slate-700/50 hover:border-blue-500/50">
-                <div className={`h-48 ${project.image} flex items-center justify-center relative`}>
+            <div key={index} className={`${isDarkMode ? "bg-slate-800/50" : "bg-slate-900"} rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group border border-slate-700/50 hover:border-blue-500/50`}>
+                <div className={`h-48    flex items-center justify-center relative`}>
+                  <img  className='flex items-center justify-center relative' src={project.image} alt="" />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-black/30 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-white/80">
+                    <span className="bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-white/80">
                       {activeCategory}
                     </span>
-                  </div>
-                  <div className="text-white/80 text-6xl font-bold group-hover:scale-110 transition-transform duration-300">
-                    {project.title.charAt(0)}
                   </div>
                 </div>
                 <div className="p-6">
@@ -387,6 +348,7 @@ const Portfolio = ({ isDarkMode }) => {
                       <span
                         key={techIndex}
                         className="text-xs bg-slate-700 px-2 py-1 rounded text-gray-300 hover:bg-slate-600 transition-colors"
+                        target='_blank'
                       >
                         {tech}
                       </span>
@@ -396,17 +358,19 @@ const Portfolio = ({ isDarkMode }) => {
                     <a
                       href={project.github}
                       className="flex items-center gap-2 text-gray-400 hover:text-blue-400 transition-colors text-sm hover:scale-105 transform"
+                      target='_blank'
                     >
                       <Github className="w-4 h-4" />
                       Code
                     </a>
-                    <a
+                    {project.live ? (<a
                       href={project.live}
                       className="flex items-center gap-2 text-gray-400 hover:text-purple-400 transition-colors text-sm hover:scale-105 transform"
+                      target='_blank'
                     >
                       <ExternalLink className="w-4 h-4" />
-                      {activeCategory === "Backend" ? "API Docs" : "Live Demo"}
-                    </a>
+                      {activeCategory === "Freelance" ? "API Docs" : "Live Demo"}
+                    </a>) : <></>}
                   </div>
                 </div>
               </div>
@@ -429,9 +393,9 @@ const Portfolio = ({ isDarkMode }) => {
             </div>
             <div className="text-center bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
               <div className="text-3xl font-bold text-purple-400 mb-2">
-                {projectCategories["Backend"].length}
+                {projectCategories["Freelance"].length}
               </div>
-              <div className="text-gray-300">Backend Projects</div>
+              <div className="text-gray-300">Freelance Projects</div>
             </div>
           </div>
         </div>
@@ -451,29 +415,29 @@ const Portfolio = ({ isDarkMode }) => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
               <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">Email</h3>
-              <a href="mailto:john@example.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                john@example.com
+              <h3 className="font-semibold mb-2 text-white">Email</h3>
+              <a href="mailto:amey.powar15@gmail.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                amey.powar15@gmail.com
               </a>
             </div>
             <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
               <Linkedin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">LinkedIn</h3>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                /in/johndeveloper
+              <h3 className="font-semibold mb-2 text-white ">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/amey-powar-a85869332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-gray-300 hover:text-blue-400 transition-colors">
+                AmeyPowar
               </a>
             </div>
             <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
               <Github className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">GitHub</h3>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                /johndeveloper
+              <h3 className="font-semibold mb-2 text-white">GitHub</h3>
+              <a href="https://github.com/Amey2815" className="text-gray-300 hover:text-blue-400 transition-colors">
+                AmeyPowar
               </a>
             </div>
           </div>
 
           <a
-            href="mailto:john@example.com"
+            href="mailto:amey.powar15@gmail.com"
             className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             Send Me a Message
@@ -485,10 +449,12 @@ const Portfolio = ({ isDarkMode }) => {
       <footer className="py-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
-            © 2025 John Developer. Built with React and Tailwind CSS.
+            © 2025 Amey Developer. Built with React and Tailwind CSS.
           </p>
         </div>
       </footer>
+
+      
     </div>
   );
 };
