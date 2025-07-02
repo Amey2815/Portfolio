@@ -62,7 +62,7 @@ const Portfolio = ({ isDarkMode }) => {
         title: "Store Rating Platform",
         description: "A full-stack MERN application for rating and managing stores. The platform supports three user roles: Admin, Store Owner, and Regular User.",
         tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
-        github: "",
+        github: "https://github.com/Amey2815/Store_Rating_platform",
         image: "bg-gradient-to-br from-blue-400 to-purple-600"
       }
     ],
