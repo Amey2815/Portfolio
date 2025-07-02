@@ -303,7 +303,7 @@ const Portfolio = ({ isDarkMode }) => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Featured Projects
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+            <p className={` ${ isDarkMode ? "text-white" : "text-black" } text-lg max-w-2xl mx-auto mb-8`}>
               Explore my work across different areas of development, from full-stack applications to specialized frontend and backend solutions
             </p>
 
@@ -382,20 +382,20 @@ const Portfolio = ({ isDarkMode }) => {
 
           {/* Project Statistics */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
-              <div className="text-3xl font-bold text-blue-400 mb-2">
+            <div className={`text-center ${isDarkMode ? "bg-gradient-to-br from-blue-500/10 to-purple-500/10" : "bg-gradient-to-br from-blue-500 to-purple-500"}  rounded-xl p-6 border border-blue-500/20`}>
+              <div className={`text-3xl font-bold ${ isDarkMode ? "text-blue-400" : "text-white"} mb-2`}>
                 {projectCategories["Full-Stack"].length}
               </div>
               <div className="text-gray-300">Full-Stack Projects</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-xl p-6 border border-green-500/20">
-              <div className="text-3xl font-bold text-green-400 mb-2">
+            <div className={`text-center ${ isDarkMode ? "bg-gradient-to-br from-green-500/10 to-blue-500/10" : "bg-gradient-to-br from-green-500 to-blue-500" } rounded-xl p-6 border border-green-500/20`}>
+              <div className={`text-3xl font-bold ${ isDarkMode ? "text-green-400" : "text-white"} mb-2`}>
                 {projectCategories["Frontend"].length}
               </div>
               <div className="text-gray-300">Frontend Projects</div>
             </div>
-            <div className="text-center bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">
-              <div className="text-3xl font-bold text-purple-400 mb-2">
+            <div className={`text-center ${ isDarkMode ? "bg-gradient-to-br from-purple-500/10 to-pink-500/10" : "bg-gradient-to-br from-purple-500 to-pink-500"} rounded-xl p-6 border border-purple-500/20`}>
+              <div className={`text-3xl font-bold ${ isDarkMode ? "text-purple-400" : "text-white"} mb-2`}>
                 {projectCategories["Freelance"].length}
               </div>
               <div className="text-gray-300">Freelance Projects</div>
@@ -410,27 +410,27 @@ const Portfolio = ({ isDarkMode }) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Let's Connect
           </h2>
-          <p className="text-gray-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className={`${ isDarkMode ? "text-gray-300" : ""} text-lg mb-12 max-w-2xl mx-auto leading-relaxed`}>
             I'm always interested in new opportunities and exciting projects.
             Whether you want to collaborate or just say hello, I'd love to hear from you!
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
+            <div className={`${ isDarkMode ? "bg-slate-700/50" : "bg-slate-700/90"} p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300`}>
               <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 text-white">Email</h3>
               <a href="mailto:amey.powar15@gmail.com" className="text-gray-300 hover:text-blue-400 transition-colors">
                 amey.powar15@gmail.com
               </a>
             </div>
-            <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
+            <div className={`${ isDarkMode ? "bg-slate-700/50" : "bg-slate-700/90"} p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300`}>
               <Linkedin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 text-white ">LinkedIn</h3>
               <a href="https://www.linkedin.com/in/amey-powar-a85869332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="text-gray-300 hover:text-blue-400 transition-colors">
                 AmeyPowar
               </a>
             </div>
-            <div className="bg-slate-700/50 p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300">
+            <div className={`${ isDarkMode ? "bg-slate-700/50" : "bg-slate-700/90"} p-6 rounded-xl hover:bg-slate-700 transition-colors duration-300`}>
               <Github className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="font-semibold mb-2 text-white">GitHub</h3>
               <a href="https://github.com/Amey2815" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -441,7 +441,7 @@ const Portfolio = ({ isDarkMode }) => {
 
           <a
             href="mailto:amey.powar15@gmail.com"
-            className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className={`inline-block px-8 py-3 text-white bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105`}
           >
             Send Me a Message
           </a>
