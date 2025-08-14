@@ -68,7 +68,7 @@ const Portfolio = ({ isDarkMode }) => {
       {
         title: "Hospital Management System",
         description: "A full-stack hospital management system with a Node.js/Express backend and a React frontend",
-        tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
+        tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router Dom" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
         github: "https://github.com/Amey2815/Hospital-Managment",
         video: assets.hospital
       },
