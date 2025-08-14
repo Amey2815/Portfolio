@@ -13,6 +13,7 @@ import Souled from "../assets/Souled.png"
 import Portfolio from "../assets/Portfolio.png"
 import QuickTalk from "../assets/QuickTalk.png"
 import Rego from "../assets/Rego.png"
+import hospital from "../assets/hospital.mp4"
 
 export const assets = {
     mysql,
@@ -29,6 +30,7 @@ export const assets = {
     Souled,
     Portfolio,
     QuickTalk,
-    Rego
+    Rego,
+    hospital
 }
 

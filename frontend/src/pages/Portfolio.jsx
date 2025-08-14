@@ -8,7 +8,7 @@ import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-
 const Portfolio = ({ isDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'projects', 'contact'];
@@ -63,8 +63,15 @@ const Portfolio = ({ isDarkMode }) => {
         description: "A full-stack MERN application for rating and managing stores. The platform supports three user roles: Admin, Store Owner, and Regular User.",
         tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
         github: "https://github.com/Amey2815/Store_Rating_platform",
-        image: "bg-gradient-to-br from-blue-400 to-purple-600"
-      }
+        video: "bg-gradient-to-br from-blue-400 to-purple-600"
+      },
+      {
+        title: "Hospital Management System",
+        description: "A full-stack hospital management system with a Node.js/Express backend and a React frontend",
+        tech: ["React", "Vite", "Tailwind CSS", "Axios", "React Router" , "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "bcryptjs"],
+        github: "https://github.com/Amey2815/Hospital-Managment",
+        video: assets.hospital
+      },
     ],
     "Freelance": [
       {
@@ -332,7 +339,8 @@ const Portfolio = ({ isDarkMode }) => {
             {projectCategories[activeCategory].map((project, index) => (
             <div key={index} className={`${isDarkMode ? "bg-slate-800/50" : "bg-slate-900"} rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 group border border-slate-700/50 hover:border-blue-500/50`}>
                 <div className={`h-48    flex items-center justify-center relative`}>
-                  <img  className='flex items-center justify-center relative' src={project.image} alt="" />
+                  {project.image ? <img  className='flex items-center justify-center relative' src={project.image} alt="" />
+                   : <video className='flex items-center justify-center relative h-full' src={project.video}  controls muted height='100%' ></video> }
                   <div className="absolute top-4 right-4">
                     <span className="bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-white/80">
                       {activeCategory}
